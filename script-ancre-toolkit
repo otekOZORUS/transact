@@ -1,0 +1,10 @@
+<script>
+    // Fonction pour supprimer l'ancre de la barre d'URL après avoir atteint la section
+    window.onload = function() {
+        if (window.location.hash && window.location.hash === "#toolkit-content") {
+            setTimeout(function() {
+                history.replaceState("", document.title, window.location.pathname + window.location.search);
+            }, 0);
+        }
+    };
+</script>
